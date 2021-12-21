@@ -35,7 +35,7 @@ ecm_setup_version(PROJECT
    SOVERSION 5)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kmediaplayer_version.h
-        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}
         COMPONENT Devel)
 
 
@@ -43,8 +43,8 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kmediaplayer_version.h
 # Dependencies
 #
 set(REQUIRED_QT_VERSION 5.15.2)
-find_package(Qt5DBus ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
-find_package(Qt5Widgets ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+find_package(Qt${QT_MAJOR_VERSION}DBus ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+find_package(Qt${QT_MAJOR_VERSION}Widgets ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 
 find_package(KF5Parts ${KF_DEP_VERSION} REQUIRED)
 find_package(KF5XmlGui ${KF_DEP_VERSION} REQUIRED)
